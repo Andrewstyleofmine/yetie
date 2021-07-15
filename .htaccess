@@ -1,0 +1,14 @@
+<ifModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteRule ^$ controllers/index.php
+    RewriteRule ^(add-lot)$ controllers/add-lot.php
+    RewriteRule ^(search)$ controllers/search.php
+    RewriteRule ^(login)$ controllers/login.php
+    RewriteRule ^(my-bets)$ controllers/my-bets.php
+    RewriteRule ^(logout)$ controllers/logout.php
+    RewriteRule ^(history)$ controllers/history.php
+    RewriteRule ^(sign-up)$ controllers/sign-up.php
+    RewriteRule ^all-lots/(.+)$ controllers/all-lots.php?id=$1 [L]
+    RewriteRule ^lot/(.+)$ controllers/lot.php?id=$1 [L]
+
+</ifModule>
